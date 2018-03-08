@@ -1,0 +1,9 @@
+version: '2'
+services:
+    app:
+        build: ./src/
+        image: sails-app:1.0.0
+        volumes:
+            - ./
+        ports:
+            - "1337:1337"

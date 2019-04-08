@@ -2,7 +2,9 @@ version: '3'
 services:
     app:
         container_name: dockerapp
-        restart: always
         build: .
+        volumes:
+            - /src/:/dev/app
         ports:
             - "1337:1337"
+        restart: always
